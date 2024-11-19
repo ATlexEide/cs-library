@@ -5,6 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        WriteLine("Hello, World!");
+        WriteLine("Pick a name for your library");
+        Library UserLibrary = new Library(ReadLine());
+        WriteLine($"{UserLibrary.Name} is ready");
     }
 }
