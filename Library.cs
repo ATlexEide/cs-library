@@ -1,12 +1,21 @@
-using System.ComponentModel.Design;
+using static System.Console;
 
 public class Library
 {
-    String Name;
-    static List<Book> Books;
-    static Menu Menu;
-    public Library(String _Name)
+    public String Name;
+    public static BookList BookList = new BookList();
+    public Menu Menu = new Menu();
+    public Library()
     {
-        Name = _Name;
+        Clear();
+        WriteLine("Pick a name for your library");
+        Name = ReadLine();
+    }
+    public void Init()
+    {
+        Clear();
+        WriteLine($"{Name} is ready");
+        ReadKey();
+        Menu.Open();
     }
 }
