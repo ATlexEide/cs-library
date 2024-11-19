@@ -5,8 +5,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        WriteLine("Pick a name for your library");
-        Library UserLibrary = new Library(ReadLine());
-        WriteLine($"{UserLibrary.Name} is ready");
+        Library UserLibrary = new Library();
+        UserLibrary.Init();
+        UserLibrary.Menu.Open();
     }
 }
