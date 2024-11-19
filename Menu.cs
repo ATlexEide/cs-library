@@ -1,8 +1,8 @@
 public class Menu
 {
-    static Options Options;
+    public static Options Options = new Options();
     public Menu()
     {
-
+    
     }
 }
